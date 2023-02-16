@@ -1,0 +1,85 @@
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>gyakorol</title>
+</head> 
+<style>
+    
+    
+
+    #elso {
+        height: 200px;
+        width: 200px;
+        left: 0;
+        display: inline-block;
+    }
+
+    #masodik {
+        height: 200px;
+        width: 200px;
+        right: 0;
+        display: inline-block;
+    }
+    form {
+        height: 100px;
+        width: 100px;
+    }
+
+</style>
+<body>
+<div>
+    <div id="elso">
+        <form >
+            <select id="mySelect" onchange="myFunction()" size="5">
+                <option value="images\\ekko.jpg" >Ekko</option>
+                <option value="images\\viego.jpg">Viego</option>
+                <option value="images\\kayn.png">Kayn</option>
+                <option value="images\\diana.jpg">Diana</option>
+                <option value="images\\rammus.jpg">Rammus</option>
+            </select>
+        </form>
+            <p>Custom range slider:</p>
+            <input type="range" min="10" max="400"  class="slider" id="myRange" onchange="myFunction()">
+            <p>Custom range slider:</p>
+            <input type="range" min="10" max="400"  class="slider" id="myRange2" onchange="myFunction()">
+            <p>elmosás</p>
+            <input type="checkbox" name="" id="checkbox" onclick="kattint()">
+    </div>
+
+    <div id="masodik" >
+        <img id="demo" src="" height="" width="" blur="">
+    </div>
+<div>
+
+
+
+
+<script>
+function myFunction() {
+  var valasztas = document.getElementById("mySelect").value;
+  document.getElementById("demo").src = valasztas;
+
+  var sldertek = document.getElementById("myRange").value;
+  document.getElementById("demo").height = sldertek 
+
+  var sldertek1 = document.getElementById("myRange2").value;
+  document.getElementById("demo").width = sldertek1
+
+ 
+    
+
+}
+
+function kattint() {
+    var box = document.getElementById("checkbox").value;
+  if (box.checked)
+  document.getElementById("demo").style.filter = "blur=2px";
+}
+
+</script>
+
+</body>
+</html> 
